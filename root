@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Valentine – Mayur ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom, #ff6f91, #ff9671);
+      text-align: center;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-top: 30px;
+    }
+
+    h2 {
+      font-size: 26px;
+      color: #fff0f5;
+    }
+
+    .message {
+      background: rgba(255, 255, 255, 0.2);
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 800px;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .gallery img {
+      width: 250px;
+      margin: 10px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+
+    button {
+      background: #ff3366;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 30px;
+      font-size: 18px;
+      color: white;
+      cursor: pointer;
+      margin: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    button:hover {
+      background: #ff1744;
+    }
+
+    #surprise {
+      display: none;
+      font-size: 22px;
+      margin: 20px;
+      color: #fffbe7;
+    }
+
+    .footer {
+      margin: 40px 0;
+      font-size: 20px;
+    }
+
+    .heart {
+      position: fixed;
+      top: -10px;
+      font-size: 20px;
+      animation: fall 6s linear infinite;
+      color: #ffccd5;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  </audio>
+
+  <h1>Happy Valentine’s Day ❤️</h1>
+  <h2>My Love, Mayur 💕</h2>
+
+  <div class="message">
+    <p>
+      Mayur, loving you feels like breathing — effortless and necessary.  
+      You walked into my life quietly, but you became my whole heart.
+    </p>
+    <p>
+      In your arms, I feel safe.  
+      In your smile, I find peace.  
+      In your love, I found my home.
+    </p>
+    <p>
+      No distance, no silence, no storm can ever change what I feel for you.
+      You are my today, my tomorrow, and my always.
+    </p>
+  </div>
+
+  <h2>Our Beautiful Memories 📸</h2>
+  <div class="gallery">
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+    <img src="photo4.jpg">
+    <img src="photo5.jpg">
+    <img src="photo6.jpg">
+    <img src="photo7.jpg">
+  </div>
+
+  <div class="message">
+    <p>
+      If I had a thousand hearts, I’d give all of them to you.  
+      If I had a thousand lives, I’d choose you in every one.
+    </p>
+    <p>
+      Thank you for being my love, my strength, my reason to smile.
+    </p>
+  </div>
+
+  <button onclick="showSurprise()">Click if you love me 💖</button>
+
+  <div id="surprise">
+    💌 I LOVE YOU MAYUR 💌 <br>
+    More than words. More than distance. Forever.
+  </div>
+
+  <div class="footer">
+    Forever yours 💕<br>
+    — Your Valentine ❤️
+  </div>
+
+  <script>
+    function showSurprise() {
+      document.getElementById("surprise").style.display = "block";
+    }
+
+    // Floating hearts
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (Math.random() * 20 + 10) + "px";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }, 500);
+  </script>
+
+</body>
+</html>
